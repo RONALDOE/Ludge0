@@ -1,0 +1,62 @@
+{
+  "name": "franc-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts ",
+    "build": "rm -r dist/*  && tsc -p . && tsc-alias",
+    "format": "prettier --write src/*"
+  },
+  "keywords": [],
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src",
+      ".env"
+    ],
+    "exec": "ts-node --files -r tsconfig-paths/register",
+    "ext": "ts, js"
+  },
+  "author": "",
+  "license": "none",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "socket.io": "^4.6.1",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.4.2",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "standard": "^17.0.0",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.5",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.3"
+  }
+}
